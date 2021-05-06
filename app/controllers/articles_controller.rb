@@ -40,14 +40,15 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
-    @article = Article.find(params[:id])
-
-    if @article.update(article_params)
-      format.html { redirect_to @article, notice: "Article was successfully updated." }
-      format.json { render :show, status: :ok, location: @article }
-    else
-      format.html { render :edit, status: :unprocessable_entity }
-      format.json { render json: @article.errors, status: :unprocessable_entity }
+    respond_to do |format|
+      @article = Article.find(params[:id])
+      if @article.update(article_params)
+        format.html { redirect_to @article, notice: "Article was successfully updated." }
+        format.json { render :show, status: :ok, location: @article }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
     end
   end
 
