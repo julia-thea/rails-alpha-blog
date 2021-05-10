@@ -1,9 +1,22 @@
 @import "bootstrap";
 
 .navbar {
-  background-color: #FDF6EA !important;
+  background-color: black !important;
 }
 
 .navbar-brand {
   font-size: 3rem;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
 }
