@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 .navbar {
-  background-color: black !important;
+  background-color: pink !important;
 }
 
 .navbar-brand {
@@ -20,3 +20,37 @@
   letter-spacing: -1px;
   font-weight: bold;
 }
+
+#home-container {
+  margin-top: 25px;
+}
+
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1499243085368-45e4b97119c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: rgb(248, 246, 246);
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  color: red;
+  background-color: rgb(245, 212, 218);
+}
+
+
+
+
+
