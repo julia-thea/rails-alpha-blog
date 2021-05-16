@@ -1,3 +1,11 @@
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+  <%= msg %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+<% end %>
 <h1 class="text-center mt-4">Listing All Articles</h1>
   <% @articles.each do |article| %>
     <div class=" mt-4 card shadow-sm p-0.5 ml-2 mr-2 mb-5 bg-body rounded">

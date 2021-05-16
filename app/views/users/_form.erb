@@ -1,14 +1,7 @@
 <%= form_with(model: @user, local: true) do |form| %>
 
   <% if @user.errors.any? %>
-    <div class="alert alert-danger" role="alert">
-      <h5><%= pluralize(@user.errors.count, "error") %> prohibited this article from being saved:</h5>
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <%= render 'layouts/error', obj: @user %>
   <% end %>
     <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label"><%= form.label :username %></label>
